@@ -11,6 +11,9 @@ function setup() {
   thickness = random(22,83);
 
   wall = createSprite(1200,200,thickness,height/2);
+  
+  bullet = createSprite(10,200,20,20);
+  bullet.velocityX = speed;
  
 }
 
@@ -20,7 +23,7 @@ function draw() {
   if(hasCollided(bullet, wall))
   {
     bullet.velocityX = 0;
-    var damage = 0.5 * weight * speed* speed/(thickness *thickness *thichness);
+    var damage = 0.5 * weight * speed* speed/(thickness *thickness *thickness);
 
     if(damage>10)
     {
